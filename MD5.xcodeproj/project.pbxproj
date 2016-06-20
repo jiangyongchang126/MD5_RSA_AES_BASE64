@@ -20,6 +20,7 @@
 		B379301C1D0B02A3008E32A7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B379301B1D0B02A3008E32A7 /* Security.framework */; };
 		B379301F1D0B02BB008E32A7 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = B379301D1D0B02BB008E32A7 /* private_key.p12 */; };
 		B37930201D0B02BB008E32A7 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = B379301E1D0B02BB008E32A7 /* public_key.der */; };
+		B39E9B0B1D18116100568F9F /* libAESCrypt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B39E9B0A1D18116100568F9F /* libAESCrypt.a */; };
 		B3F1A21E1D0BD40700A6C6BE /* ZCTool_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F1A21D1D0BD40700A6C6BE /* ZCTool_Base64.m */; };
 		B3F1A2231D0BDBEC00A6C6BE /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F1A2211D0BDBEC00A6C6BE /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		B379301B1D0B02A3008E32A7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B379301D1D0B02BB008E32A7 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
 		B379301E1D0B02BB008E32A7 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		B39E9B0A1D18116100568F9F /* libAESCrypt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAESCrypt.a; path = "Pods/../build/Debug-iphoneos/libAESCrypt.a"; sourceTree = "<group>"; };
 		B3F1A21C1D0BD40700A6C6BE /* ZCTool_Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTool_Base64.h; sourceTree = "<group>"; };
 		B3F1A21D1D0BD40700A6C6BE /* ZCTool_Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTool_Base64.m; sourceTree = "<group>"; };
 		B3F1A2201D0BDBEC00A6C6BE /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39E9B0B1D18116100568F9F /* libAESCrypt.a in Frameworks */,
 				B379301C1D0B02A3008E32A7 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +123,7 @@
 		AB392E2DDFD4C5913C47C2E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B39E9B0A1D18116100568F9F /* libAESCrypt.a */,
 				B359ACFF1D0F98AC00270233 /* AES */,
 			);
 			name = Frameworks;
@@ -561,6 +565,10 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MD5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jiangyongchang.MD5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -574,6 +582,10 @@
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = MD5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = jiangyongchang.MD5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

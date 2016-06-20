@@ -1,3 +1,4 @@
 pod 'AESCrypt'
 pod 'Bugtags'
 pod 'AFNetWorking'
+pod 'SDWebImage'
