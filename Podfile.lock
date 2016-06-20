@@ -1,0 +1,13 @@
+PODS:
+  - AESCrypt (0.0.1)
+  - Bugtags (1.2.6)
+
+DEPENDENCIES:
+  - AESCrypt
+  - Bugtags
+
+SPEC CHECKSUMS:
+  AESCrypt: 1d89bf8b0789cf274ab2205ea461adbe9321d5f8
+  Bugtags: 10d4b0c089b34f6e28877e5830218627ebd14dbb
+
+COCOAPODS: 0.39.0

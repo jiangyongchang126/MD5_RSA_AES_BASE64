@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3792FE41D0AF787008E32A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3792FE31D0AF787008E32A7 /* main.m */; };
+		B3792FE71D0AF787008E32A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3792FE61D0AF787008E32A7 /* AppDelegate.m */; };
+		B3792FEA1D0AF787008E32A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3792FE91D0AF787008E32A7 /* ViewController.m */; };
+		B3792FED1D0AF787008E32A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3792FEB1D0AF787008E32A7 /* Main.storyboard */; };
+		B3792FEF1D0AF787008E32A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3792FEE1D0AF787008E32A7 /* Assets.xcassets */; };
+		B3792FF21D0AF787008E32A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3792FF01D0AF787008E32A7 /* LaunchScreen.storyboard */; };
+		B3792FFD1D0AF787008E32A7 /* MD5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3792FFC1D0AF787008E32A7 /* MD5Tests.m */; };
+		B37930081D0AF787008E32A7 /* MD5UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B37930071D0AF787008E32A7 /* MD5UITests.m */; };
+		B37930171D0AF7BB008E32A7 /* EncryptionMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = B37930161D0AF7BB008E32A7 /* EncryptionMD5.m */; };
+		B379301A1D0B0282008E32A7 /* RSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = B37930191D0B0282008E32A7 /* RSAEncryptor.m */; };
+		B379301C1D0B02A3008E32A7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B379301B1D0B02A3008E32A7 /* Security.framework */; };
+		B379301F1D0B02BB008E32A7 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = B379301D1D0B02BB008E32A7 /* private_key.p12 */; };
+		B37930201D0B02BB008E32A7 /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = B379301E1D0B02BB008E32A7 /* public_key.der */; };
+		B3F1A21E1D0BD40700A6C6BE /* ZCTool_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F1A21D1D0BD40700A6C6BE /* ZCTool_Base64.m */; };
+		B3F1A2231D0BDBEC00A6C6BE /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = B3F1A2211D0BDBEC00A6C6BE /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3792FF91D0AF787008E32A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3792FD71D0AF787008E32A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3792FDE1D0AF787008E32A7;
+			remoteInfo = MD5;
+		};
+		B37930041D0AF787008E32A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3792FD71D0AF787008E32A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3792FDE1D0AF787008E32A7;
+			remoteInfo = MD5;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		64D6A19F2285222935CD57FD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B359AD001D0F98AC00270233 /* AESCrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		B359AD011D0F98AC00270233 /* AESCrypt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		B359AD021D0F98AC00270233 /* NSData+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		B359AD031D0F98AC00270233 /* NSData+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		B359AD041D0F98AC00270233 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		B359AD051D0F98AC00270233 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		B359AD061D0F98AC00270233 /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		B359AD071D0F98AC00270233 /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		B3792FDF1D0AF787008E32A7 /* MD5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MD5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3792FE31D0AF787008E32A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B3792FE51D0AF787008E32A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B3792FE61D0AF787008E32A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B3792FE81D0AF787008E32A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B3792FE91D0AF787008E32A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B3792FEC1D0AF787008E32A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3792FEE1D0AF787008E32A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3792FF11D0AF787008E32A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3792FF31D0AF787008E32A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3792FF81D0AF787008E32A7 /* MD5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MD5Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3792FFC1D0AF787008E32A7 /* MD5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MD5Tests.m; sourceTree = "<group>"; };
+		B3792FFE1D0AF787008E32A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B37930031D0AF787008E32A7 /* MD5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MD5UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B37930071D0AF787008E32A7 /* MD5UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MD5UITests.m; sourceTree = "<group>"; };
+		B37930091D0AF787008E32A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B37930151D0AF7BB008E32A7 /* EncryptionMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionMD5.h; sourceTree = "<group>"; };
+		B37930161D0AF7BB008E32A7 /* EncryptionMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionMD5.m; sourceTree = "<group>"; };
+		B37930181D0B0282008E32A7 /* RSAEncryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryptor.h; sourceTree = "<group>"; };
+		B37930191D0B0282008E32A7 /* RSAEncryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryptor.m; sourceTree = "<group>"; };
+		B379301B1D0B02A3008E32A7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B379301D1D0B02BB008E32A7 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
+		B379301E1D0B02BB008E32A7 /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		B3F1A21C1D0BD40700A6C6BE /* ZCTool_Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTool_Base64.h; sourceTree = "<group>"; };
+		B3F1A21D1D0BD40700A6C6BE /* ZCTool_Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTool_Base64.m; sourceTree = "<group>"; };
+		B3F1A2201D0BDBEC00A6C6BE /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		B3F1A2211D0BDBEC00A6C6BE /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		B3F1A2221D0BDBEC00A6C6BE /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		F00E4F6CF2135EC28209B847 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3792FDC1D0AF787008E32A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B379301C1D0B02A3008E32A7 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3792FF51D0AF787008E32A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37930001D0AF787008E32A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1009CAACC6E2FD0F978F34D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64D6A19F2285222935CD57FD /* Pods.debug.xcconfig */,
+				F00E4F6CF2135EC28209B847 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AB392E2DDFD4C5913C47C2E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B359ACFF1D0F98AC00270233 /* AES */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B359ACFF1D0F98AC00270233 /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				B359AD001D0F98AC00270233 /* AESCrypt.h */,
+				B359AD011D0F98AC00270233 /* AESCrypt.m */,
+				B359AD021D0F98AC00270233 /* NSData+Base64.h */,
+				B359AD031D0F98AC00270233 /* NSData+Base64.m */,
+				B359AD041D0F98AC00270233 /* NSData+CommonCrypto.h */,
+				B359AD051D0F98AC00270233 /* NSData+CommonCrypto.m */,
+				B359AD061D0F98AC00270233 /* NSString+Base64.h */,
+				B359AD071D0F98AC00270233 /* NSString+Base64.m */,
+			);
+			name = AES;
+			path = Pods/AESCrypt/Classes/AES;
+			sourceTree = "<group>";
+		};
+		B3792FD61D0AF787008E32A7 = {
+			isa = PBXGroup;
+			children = (
+				B379301D1D0B02BB008E32A7 /* private_key.p12 */,
+				B379301E1D0B02BB008E32A7 /* public_key.der */,
+				B379301B1D0B02A3008E32A7 /* Security.framework */,
+				B3792FE11D0AF787008E32A7 /* MD5 */,
+				B3792FFB1D0AF787008E32A7 /* MD5Tests */,
+				B37930061D0AF787008E32A7 /* MD5UITests */,
+				B3792FE01D0AF787008E32A7 /* Products */,
+				1009CAACC6E2FD0F978F34D5 /* Pods */,
+				AB392E2DDFD4C5913C47C2E7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B3792FE01D0AF787008E32A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3792FDF1D0AF787008E32A7 /* MD5.app */,
+				B3792FF81D0AF787008E32A7 /* MD5Tests.xctest */,
+				B37930031D0AF787008E32A7 /* MD5UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3792FE11D0AF787008E32A7 /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				B3792FE51D0AF787008E32A7 /* AppDelegate.h */,
+				B3792FE61D0AF787008E32A7 /* AppDelegate.m */,
+				B3792FE81D0AF787008E32A7 /* ViewController.h */,
+				B3792FE91D0AF787008E32A7 /* ViewController.m */,
+				B37930151D0AF7BB008E32A7 /* EncryptionMD5.h */,
+				B37930161D0AF7BB008E32A7 /* EncryptionMD5.m */,
+				B37930181D0B0282008E32A7 /* RSAEncryptor.h */,
+				B37930191D0B0282008E32A7 /* RSAEncryptor.m */,
+				B3F1A21C1D0BD40700A6C6BE /* ZCTool_Base64.h */,
+				B3F1A21D1D0BD40700A6C6BE /* ZCTool_Base64.m */,
+				B3F1A21F1D0BDBEC00A6C6BE /* GTMBase64 */,
+				B3792FEB1D0AF787008E32A7 /* Main.storyboard */,
+				B3792FEE1D0AF787008E32A7 /* Assets.xcassets */,
+				B3792FF01D0AF787008E32A7 /* LaunchScreen.storyboard */,
+				B3792FF31D0AF787008E32A7 /* Info.plist */,
+				B3792FE21D0AF787008E32A7 /* Supporting Files */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
+		B3792FE21D0AF787008E32A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3792FE31D0AF787008E32A7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3792FFB1D0AF787008E32A7 /* MD5Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B3792FFC1D0AF787008E32A7 /* MD5Tests.m */,
+				B3792FFE1D0AF787008E32A7 /* Info.plist */,
+			);
+			path = MD5Tests;
+			sourceTree = "<group>";
+		};
+		B37930061D0AF787008E32A7 /* MD5UITests */ = {
+			isa = PBXGroup;
+			children = (
+				B37930071D0AF787008E32A7 /* MD5UITests.m */,
+				B37930091D0AF787008E32A7 /* Info.plist */,
+			);
+			path = MD5UITests;
+			sourceTree = "<group>";
+		};
+		B3F1A21F1D0BDBEC00A6C6BE /* GTMBase64 */ = {
+			isa = PBXGroup;
+			children = (
+				B3F1A2201D0BDBEC00A6C6BE /* GTMBase64.h */,
+				B3F1A2211D0BDBEC00A6C6BE /* GTMBase64.m */,
+				B3F1A2221D0BDBEC00A6C6BE /* GTMDefines.h */,
+			);
+			path = GTMBase64;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3792FDE1D0AF787008E32A7 /* MD5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B379300C1D0AF787008E32A7 /* Build configuration list for PBXNativeTarget "MD5" */;
+			buildPhases = (
+				79002A0E261E760BF0CA014A /* Check Pods Manifest.lock */,
+				B3792FDB1D0AF787008E32A7 /* Sources */,
+				B3792FDC1D0AF787008E32A7 /* Frameworks */,
+				B3792FDD1D0AF787008E32A7 /* Resources */,
+				0DF03E8B72FC056AABC355F0 /* Embed Pods Frameworks */,
+				3E9470153D8CE0987458FDB8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MD5;
+			productName = MD5;
+			productReference = B3792FDF1D0AF787008E32A7 /* MD5.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3792FF71D0AF787008E32A7 /* MD5Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B379300F1D0AF787008E32A7 /* Build configuration list for PBXNativeTarget "MD5Tests" */;
+			buildPhases = (
+				B3792FF41D0AF787008E32A7 /* Sources */,
+				B3792FF51D0AF787008E32A7 /* Frameworks */,
+				B3792FF61D0AF787008E32A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3792FFA1D0AF787008E32A7 /* PBXTargetDependency */,
+			);
+			name = MD5Tests;
+			productName = MD5Tests;
+			productReference = B3792FF81D0AF787008E32A7 /* MD5Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B37930021D0AF787008E32A7 /* MD5UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B37930121D0AF787008E32A7 /* Build configuration list for PBXNativeTarget "MD5UITests" */;
+			buildPhases = (
+				B3792FFF1D0AF787008E32A7 /* Sources */,
+				B37930001D0AF787008E32A7 /* Frameworks */,
+				B37930011D0AF787008E32A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B37930051D0AF787008E32A7 /* PBXTargetDependency */,
+			);
+			name = MD5UITests;
+			productName = MD5UITests;
+			productReference = B37930031D0AF787008E32A7 /* MD5UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3792FD71D0AF787008E32A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "蒋永昌";
+				TargetAttributes = {
+					B3792FDE1D0AF787008E32A7 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					B3792FF71D0AF787008E32A7 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = B3792FDE1D0AF787008E32A7;
+					};
+					B37930021D0AF787008E32A7 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = B3792FDE1D0AF787008E32A7;
+					};
+				};
+			};
+			buildConfigurationList = B3792FDA1D0AF787008E32A7 /* Build configuration list for PBXProject "MD5" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3792FD61D0AF787008E32A7;
+			productRefGroup = B3792FE01D0AF787008E32A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3792FDE1D0AF787008E32A7 /* MD5 */,
+				B3792FF71D0AF787008E32A7 /* MD5Tests */,
+				B37930021D0AF787008E32A7 /* MD5UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3792FDD1D0AF787008E32A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3792FF21D0AF787008E32A7 /* LaunchScreen.storyboard in Resources */,
+				B3792FEF1D0AF787008E32A7 /* Assets.xcassets in Resources */,
+				B3792FED1D0AF787008E32A7 /* Main.storyboard in Resources */,
+				B379301F1D0B02BB008E32A7 /* private_key.p12 in Resources */,
+				B37930201D0B02BB008E32A7 /* public_key.der in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3792FF61D0AF787008E32A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B37930011D0AF787008E32A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DF03E8B72FC056AABC355F0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E9470153D8CE0987458FDB8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79002A0E261E760BF0CA014A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3792FDB1D0AF787008E32A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3792FEA1D0AF787008E32A7 /* ViewController.m in Sources */,
+				B3F1A21E1D0BD40700A6C6BE /* ZCTool_Base64.m in Sources */,
+				B3792FE71D0AF787008E32A7 /* AppDelegate.m in Sources */,
+				B3792FE41D0AF787008E32A7 /* main.m in Sources */,
+				B37930171D0AF7BB008E32A7 /* EncryptionMD5.m in Sources */,
+				B379301A1D0B0282008E32A7 /* RSAEncryptor.m in Sources */,
+				B3F1A2231D0BDBEC00A6C6BE /* GTMBase64.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3792FF41D0AF787008E32A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3792FFD1D0AF787008E32A7 /* MD5Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3792FFF1D0AF787008E32A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B37930081D0AF787008E32A7 /* MD5UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3792FFA1D0AF787008E32A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3792FDE1D0AF787008E32A7 /* MD5 */;
+			targetProxy = B3792FF91D0AF787008E32A7 /* PBXContainerItemProxy */;
+		};
+		B37930051D0AF787008E32A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3792FDE1D0AF787008E32A7 /* MD5 */;
+			targetProxy = B37930041D0AF787008E32A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B3792FEB1D0AF787008E32A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3792FEC1D0AF787008E32A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3792FF01D0AF787008E32A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3792FF11D0AF787008E32A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B379300A1D0AF787008E32A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B379300B1D0AF787008E32A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B379300D1D0AF787008E32A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64D6A19F2285222935CD57FD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = MD5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jiangyongchang.MD5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B379300E1D0AF787008E32A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F00E4F6CF2135EC28209B847 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = MD5/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jiangyongchang.MD5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B37930101D0AF787008E32A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MD5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jiangyongchang.MD5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MD5.app/MD5";
+			};
+			name = Debug;
+		};
+		B37930111D0AF787008E32A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MD5Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jiangyongchang.MD5Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MD5.app/MD5";
+			};
+			name = Release;
+		};
+		B37930131D0AF787008E32A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MD5UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jiangyongchang.MD5UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MD5;
+			};
+			name = Debug;
+		};
+		B37930141D0AF787008E32A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MD5UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jiangyongchang.MD5UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MD5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3792FDA1D0AF787008E32A7 /* Build configuration list for PBXProject "MD5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B379300A1D0AF787008E32A7 /* Debug */,
+				B379300B1D0AF787008E32A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B379300C1D0AF787008E32A7 /* Build configuration list for PBXNativeTarget "MD5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B379300D1D0AF787008E32A7 /* Debug */,
+				B379300E1D0AF787008E32A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B379300F1D0AF787008E32A7 /* Build configuration list for PBXNativeTarget "MD5Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37930101D0AF787008E32A7 /* Debug */,
+				B37930111D0AF787008E32A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B37930121D0AF787008E32A7 /* Build configuration list for PBXNativeTarget "MD5UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B37930131D0AF787008E32A7 /* Debug */,
+				B37930141D0AF787008E32A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3792FD71D0AF787008E32A7 /* Project object */;
+}
