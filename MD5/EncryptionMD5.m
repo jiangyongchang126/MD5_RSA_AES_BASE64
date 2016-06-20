@@ -10,8 +10,8 @@
 #import <CommonCrypto/CommonDigest.h>
 
 //秘钥
-//static NSString *encryptionKey = @"nha735n197nxn(N′568GGS%d~~9naei';45vhhafdjkv]32rpks;lg,];:vjo(&**&^)";
-static NSString *encryptionKey = @"";
+static NSString *encryptionKey = @"nha735n197nxn(N′568GGS%d~~9naei';45vhhafdjkv]32rpks;lg,];:vjo(&**&^)";
+//static NSString *encryptionKey = @"";
 
 
 @implementation EncryptionMD5
